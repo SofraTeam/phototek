@@ -1,0 +1,5 @@
+node_modules/
+logs/
+db/
+public/
+npm-debug*

@@ -1,0 +1,18 @@
+<div class="ftkViewerWrapper" >
+ 	<div ng-repeat="photo in photos track by $index" class="ftkPhotoWrapper noselect" draggable="true"  style="width:{{cardWidth}}px" ftk-dom="viewer.handle($index,$dom)">
+	 	<div class="ftkPhotoSubWrapper" >
+	      	<md-card  class="ftkPhotoCard">
+		        <div class="ftkImgWrapper md-card-image">
+		          <img ng-src="{{photo.src}}" style="width:100%" alt="">  
+		        </div>
+
+		       	<md-card-actions layout="row" layout-align="end center">
+	                <md-button class="md-icon-button" aria-label="Zoom in">
+	                   <md-icon aria-label="Zoom in" class="material-icons" ng-click="viewer.zoomin(photo,$index)">zoom_in</md-icon>
+	                </md-button>
+		        </md-card-actions>
+	     	</md-card>
+	    </div>
+ 	</div>
+ 	<div style="clear: both">&nbsp;</div>
+</div>
