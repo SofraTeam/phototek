@@ -21,15 +21,17 @@ angular.module('phototek.viewer', ['phototek.utils'])
 	   					_indexedDoms[index] = dom.element[0];
 	   				};
 					this.zoomin = function(photo,index){
+                        if($scope.columns < 2) return;
+                        var scale = $scope.columns === 2 ? 2 : $scope.columns -1;
 						$scope.photos.unshift($scope.photos.splice(index,1)[0]);
 						_current = $scope.photos[0];
 						$(_indexedDoms[0]).animate({
-							width : ($scope.cardWidth * ($scope.columns -1))  + 'px',
-							height : (200 * ($scope.columns -1) ) + 'px'
+							width : ($scope.cardWidth * scale)  + 'px',
+							height : (200 * scale ) + 'px'
 						},{
 							duration : 1000,
 							complete : function(){
-							
+
 							}
 						});
 

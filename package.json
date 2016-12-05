@@ -1,6 +1,6 @@
 {
   "name": "phototek",
-  "version": "0.1.0",
+  "version": "0.0.9",
   "description": "It is all about photos.",
   "main": "app/launcher.js",
   "scripts": {
